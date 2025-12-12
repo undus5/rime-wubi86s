@@ -33,4 +33,5 @@
 
 ## 参考
 
+- https://github.com/KyleBing/rime-wubi86-jidian/issues/154
 - [rime-prelude (Rime官方基础配置)](https://github.com/rime/rime-prelude)
