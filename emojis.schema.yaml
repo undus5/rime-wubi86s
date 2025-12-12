@@ -1,0 +1,45 @@
+# Emoji schema
+
+schema:
+  schema_id: emojis
+  name: "表情Emoji简化"
+  version: "0.1"
+
+engine:
+  processors:
+    - ascii_composer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - echo_translator
+    - punct_translator
+    - table_translator
+
+speller:
+  delimiter: " ;'"
+  auto_select: true # 顶字上屏
+  auto_select_unique_candidate: true # 无重码自动上屏
+
+translator:
+  dictionary: emojis
+  enable_completion: true
+  enable_charset_filter: false
+  enable_encoder: false
+  enable_sentence: false
+  encode_commit_history: false
+  enable_user_dict: false
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default

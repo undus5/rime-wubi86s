@@ -10,7 +10,7 @@
 # Windows 10 21H2
 
 ---
-name: wubi86
+name: wubi86s
 version: "1.0"
 sort: original
 columns:

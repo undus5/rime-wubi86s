@@ -1,0 +1,108 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: wubi86s
+  name: "五笔86单字"
+  version: "0.2"
+  author:
+    - 发明人 王永民先生
+    - undus5
+  description: |
+    五笔字型86版单字方案
+    码表源自微软五笔
+    敲 z 键进入拼音反查
+  dependencies:
+    - pinyin_simp
+    - emojis
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+    reset: 0
+  # - name: full_shape
+  #   states: [ 半角, 全角 ]
+  # - name: extended_charset
+  #   states: [ 常用, 增廣 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - affix_segmentor@emoji
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - table_translator
+    - table_translator@emoji
+
+speller:
+  delimiter: " ;'"
+  max_code_length: 4
+  auto_select: true # 顶字上屏
+  auto_select_unique_candidate: true # 无重码自动上屏
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+translator:
+  dictionary: wubi86s
+  enable_completion: true
+  enable_charset_filter: true
+  enable_encoder: false
+  enable_sentence: false
+  encode_commit_history: false
+  enable_user_dict: false
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "^z[a-hj-tw-z]*'?$"
+    emoji: "^zv[a-z]*$"
+
+reverse_lookup:
+  dictionary: pinyin_simp
+  prefix: "z"
+  suffix: "'"
+  tips: "(拼音)"
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  enable_completion: true
+  enable_charset_filter: false
+  enable_encoder: false
+  enable_sentence: false
+  encode_commit_history: false
+  enable_user_dict: false
+
+emoji:
+  tag: emoji
+  dictionary: emojis
+  prefix: "zv"
+  suffix: "'"
+  tips: "(Emoji)"
+  enable_completion: true
+  enable_charset_filter: true
+  enable_encoder: false
+  enable_sentence: false
+  encode_commit_history: false
+  enable_user_dict: false

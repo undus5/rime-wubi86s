@@ -2,12 +2,13 @@
 
 [Rime](https://rime.im) 输入法引擎开箱即用配置
 
-包含以下内容：
+## 功能
 
-- [rime-prelude (Rime官方基础配置)](https://github.com/rime/rime-prelude)
+五笔单字方案，z 键拼音反查，zv 键 Emoji 反查。
+
+## 依赖组件
 
 - [rime-pinyin-simp (袖珍简化字拼音)](https://github.com/rime/rime-pinyin-simp)
-
 - [Rime 86 五笔单字方案 - 狂飙](https://github.com/networm/Rime)
 
 ## 各平台配置文件位置
@@ -27,3 +28,9 @@
   ([RIME Plugin](https://f-droid.org/en/packages/org.fcitx.fcitx5.android.plugin.rime/))
   : content://org.fictx.fcitx5.android.provider/document/files/data/rime
 
+- iOS
+  - [仓输入法](https://ihsiao.com/apps/hamster/docs/)
+
+## 参考
+
+- [rime-prelude (Rime官方基础配置)](https://github.com/rime/rime-prelude)
