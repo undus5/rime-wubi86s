@@ -75,8 +75,8 @@ translator:
 recognizer:
   import_preset: default
   patterns:
-    reverse_lookup: "^z[a-z]*'?$"
-    emoji: "^`[a-z]*$"
+    reverse_lookup: "^z[^iuv][a-z]*'?$"
+    emoji: "^zv[a-z]*$"
 
 reverse_lookup:
   dictionary: pinyin_simp
@@ -97,7 +97,7 @@ reverse_lookup:
 emoji:
   tag: emoji
   dictionary: emojis
-  prefix: "`"
+  prefix: "zv"
   suffix: "'"
   tips: "(Emoji)"
   enable_completion: true
