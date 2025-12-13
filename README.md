@@ -1,15 +1,15 @@
-# rimerc
+# rime-wubi86s
 
-[Rime](https://rime.im) 输入法引擎开箱即用配置
+[Rime](https://rime.im) (中州韵输入法引擎) 五笔 86 单字方案
 
 ## 功能
 
-五笔单字方案，z 键拼音反查，zv 键 Emoji 反查。
+z 键拼音反查, zv 键 Emoji 反查
 
 ## 依赖组件
 
-- [rime-pinyin-simp (袖珍简化字拼音)](https://github.com/rime/rime-pinyin-simp)
-- [Rime 86 五笔单字方案 - 狂飙](https://github.com/networm/Rime)
+- 码表提取自微软五笔并移除词组, 提取工具: [WubiLex 五笔助手](https://wubi.aardio.com/)
+- 拼音反查依赖: [rime-pinyin-simp](https://github.com/rime/rime-pinyin-simp) (袖珍简化字拼音)
 
 ## 各平台配置文件位置
 
