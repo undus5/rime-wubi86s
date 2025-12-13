@@ -26,7 +26,7 @@ z 键拼音反查, zv 键 Emoji 反查
 - Android
   - [Fcitx5 for Android](https://f-droid.org/en/packages/org.fcitx.fcitx5.android/)
   ([RIME Plugin](https://f-droid.org/en/packages/org.fcitx.fcitx5.android.plugin.rime/))
-  : content://org.fictx.fcitx5.android.provider/document/files/data/rime
+  : Fcitx5 -> Addons -> Rime (gear button) -> User data dir
 
 - iOS
   - [仓输入法](https://ihsiao.com/apps/hamster/docs/)
