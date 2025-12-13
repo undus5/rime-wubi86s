@@ -75,7 +75,7 @@ translator:
 recognizer:
   import_preset: default
   patterns:
-    reverse_lookup: "^z[^iuv][a-z]*'?$"
+    reverse_lookup: "^z[^iuv]{0,1}[a-z]*'?$"
     emoji: "^zv[a-z]*$"
 
 reverse_lookup:
