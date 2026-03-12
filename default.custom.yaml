@@ -1,6 +1,6 @@
 patch:
   menu:
-    page_size: 5
+    page_size: 7
   ascii_composer:
     switch_key:
       Shift_L: commit_code

@@ -4,7 +4,7 @@
 
 ## 功能
 
-z 键拼音反查, zv 键 Emoji 反查
+z 键拼音反查, zv + [q/w/e/r/t] Emoji
 
 ## 依赖组件
 
